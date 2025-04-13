@@ -22,7 +22,7 @@ class PyObjectId(ObjectId):
 
 
 # Base shared flashcard model
-class FlashcardBase(BaseModel):
+class FlashCardBase(BaseModel):
     word: str
     clue: Optional[str] = None
     contextSentence: Optional[str] = None
@@ -51,7 +51,7 @@ class FlashcardBase(BaseModel):
 
 
 # Model used when creating a new flashcard (no ID yet)
-class FlashcardCreate(FlashcardBase):
+class FlashCardCreate(FlashCardBase):
     pass
 
 
