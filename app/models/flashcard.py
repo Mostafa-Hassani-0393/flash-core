@@ -36,3 +36,15 @@ class FlashCardDB(FlashCardBase):
         json_encoders = {
             datetime: lambda v: v.isoformat(),  # For Swagger/JSON serialization
         }
+
+class FlashCardUpdate(BaseModel):
+    word: Optional[str]
+    clue: Optional[str]
+    definition: Optional[str]
+    contextSentence: Optional[str]
+    pluralForm: Optional[str]
+    mnemonic: Optional[str]
+    certLevel: Optional[str]
+    tags: Optional[Dict[str, Optional[str]]]
+    ipa: Optional[str]
+    modifyTime: Optional[datetime] = Field(default_factory=datetime.utcnow)
